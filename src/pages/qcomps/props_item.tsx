@@ -1,11 +1,10 @@
 import { ItemProps } from "@/types/item";
 
-function Item({ name, isPacked } : ItemProps) {
-  return (
-    <li className="item">
-      {name}
-    </li>
-  );
+function Item({ name, isPacked }: ItemProps) {
+  if (isPacked) {
+    return <li className="item"><del> {name}</del></li>
+  }
+  return <li className="item">{name}</li>
 }
 
 export default function PackingList() {
