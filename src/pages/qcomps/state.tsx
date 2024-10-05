@@ -29,7 +29,7 @@ export default function Gallery() {
       <button onClick={handleMoreClick}>
         {showMore ? 'Hide' : 'Show'} details
       </button>
-      {showMore && <p>{sculpture.description}</p>}
+      <p>{showMore && sculpture.description}</p>
       <img
         src={sculpture.url}
         alt={sculpture.alt}
